@@ -2,7 +2,11 @@ require "yaml"
 
 def load_library(file)
   hoa = YAML.load_file(file)
-  array.map
+  hoh = {}
+  hoa.each do |key, value|
+    hoh[key.to_s] = {:english => value[0], :japanese => value[1]}
+  end
+  return hoh
 end
 
 def get_japanese_emoticon(file, emoticon)
