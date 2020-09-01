@@ -1,7 +1,8 @@
 require "yaml"
 
 def load_library(file)
-  return YAML.load_file(file)
+  hoa = YAML.load_file(file)
+  array.map
 end
 
 def get_japanese_emoticon(file, emoticon)
