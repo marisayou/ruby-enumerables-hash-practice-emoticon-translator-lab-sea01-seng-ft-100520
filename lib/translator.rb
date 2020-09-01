@@ -22,3 +22,5 @@ def get_english_meaning(file, emoticon)
   end
       
 end
+
+load_library(emoticons.yml)
