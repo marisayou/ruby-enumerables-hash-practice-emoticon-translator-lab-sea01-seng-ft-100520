@@ -5,16 +5,19 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(file, emoticon)
-  # code goes here
+  dict = load_library(file)
+  dict.each do |key, value|
+    if value[:english] = emoticon
+      return value[:japanese]
+    end
+  end
 end
 
 def get_english_meaning(file, emoticon)
   dict = load_library(file)
   dict.each do |key, value|
-    for i in value
-      if i == emoticon
-        return key
-      end
+    if value[:japanese] == emoticon
+      return key
     end
   end
       
