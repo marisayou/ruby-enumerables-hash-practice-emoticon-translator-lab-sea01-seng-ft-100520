@@ -12,7 +12,7 @@ end
 def get_japanese_emoticon(file, emoticon)
   dict = load_library(file)
   dict.each do |key, value|
-    if value[:english] = emoticon
+    if value[:english] == emoticon
       return value[:japanese]
     end
   end
